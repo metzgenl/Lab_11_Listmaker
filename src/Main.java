@@ -1,8 +1,8 @@
-import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
+        //Declare Variables
         Scanner in = new Scanner(System.in);
         Boolean quit = false;
         ArrayList<String> myArrList = new ArrayList<>();
@@ -11,7 +11,7 @@ public class Main {
         int location = 0;
         Boolean done = false;
         do {
-
+            //Get the choice from the user
             choice = SafeInput.getRegExString(in, "Choose an option: Add (A), Delete (D), Insert (I), Print (P), or Quit (Q)", "[AaDdIiPpQq]");
 
             switch(choice) {
@@ -23,6 +23,7 @@ public class Main {
                     myArrList.add(userInput);
                 }
                 break;
+
                 //Delete
                 case "D":
                 case "d":
@@ -38,6 +39,7 @@ public class Main {
                     }
                 }
                 break;
+
                 //Insert
                 case "I":
                 case "i":
@@ -54,6 +56,7 @@ public class Main {
                     }
                 }
                 break;
+
                 //Print
                 case "P":
                 case "p":
@@ -61,6 +64,7 @@ public class Main {
                     printList(myArrList);
                 }
                 break;
+
                 //Quit
                 case "Q":
                 case "q":
